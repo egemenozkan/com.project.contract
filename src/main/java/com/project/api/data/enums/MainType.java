@@ -1,7 +1,7 @@
 package com.project.api.data.enums;
 
 public enum MainType {
-	ALL(1), LODGING(2), TRANSPORT(3), SHOPPING(4), FOOD_AND_BEVERAGE(5), ATTRACTIONS(6), NOTSET(0);
+	ALL(1), LODGING(2), TRANSPORT(3), SHOPPING(4), FOOD_AND_BEVERAGE(5), ATTRACTIONS(6), HEALTH(7), ENTERTAINMENT(8), NOTSET(0);
 
 	private final int id;
 

@@ -1,21 +1,28 @@
 package com.project.api.data.model.place;
 
+import java.time.LocalDateTime;
+import java.util.Map;
+
 import com.project.api.data.enums.Language;
 import com.project.api.data.enums.PlaceType;
 import com.project.api.data.model.common.Address;
+import com.project.api.data.model.common.Contact;
 
 public class Place {
 	private long id;
 	private String name;
 	private Language language;
+	private String slug;
 
-	private String originalName;
-	private Language originalLanguage;
-
+//	private List<Localisation>  localisation;
+	private Map<String, Localisation> localisation;
 	private PlaceType type;
 	private Address address;
+	private Contact contact;
+	
+	private LocalDateTime createDateTime;
+	private LocalDateTime updateDateTime;
 
-	private String slug;
 
 	public long getId() {
 		return id;
@@ -41,21 +48,6 @@ public class Place {
 		this.language = language;
 	}
 
-	public String getOriginalName() {
-		return originalName;
-	}
-
-	public void setOriginalName(String originalName) {
-		this.originalName = originalName;
-	}
-
-	public Language getOriginalLanguage() {
-		return originalLanguage;
-	}
-
-	public void setOriginalLanguage(Language originalLanguage) {
-		this.originalLanguage = originalLanguage;
-	}
 
 	public PlaceType getType() {
 		return type;
@@ -80,5 +72,45 @@ public class Place {
 	public void setSlug(String slug) {
 		this.slug = slug;
 	}
+
+	public Map<String, Localisation> getLocalisation() {
+		return localisation;
+	}
+
+	public void setLocalisation(Map<String, Localisation> localisation) {
+		this.localisation = localisation;
+	}
+
+	public LocalDateTime getCreateDateTime() {
+		return createDateTime;
+	}
+
+	public void setCreateDateTime(LocalDateTime createDateTime) {
+		this.createDateTime = createDateTime;
+	}
+
+	public LocalDateTime getUpdateDateTime() {
+		return updateDateTime;
+	}
+
+	public void setUpdateDateTime(LocalDateTime updateDateTime) {
+		this.updateDateTime = updateDateTime;
+	}
+
+	public Contact getContact() {
+		return contact;
+	}
+
+	public void setContact(Contact contact) {
+		this.contact = contact;
+	}
+
+//	public HashMap<String, Localisation> getLocalisation() {
+//		return localisation;
+//	}
+//
+//	public void setLocalisation(HashMap<String, Localisation> localisation) {
+//		this.localisation = localisation;
+//	}
 
 }

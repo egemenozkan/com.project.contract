@@ -35,14 +35,6 @@ public class User implements UserDetails {
 		this.enabled = true;
 	}
 
-	public User(String firstName, String lastName, String email, String password, UserType userType) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.password = password;
-		this.userType = userType;
-	}
-
 	@Override
 	public boolean isAccountNonExpired() {
 		return accountNonExpired;
