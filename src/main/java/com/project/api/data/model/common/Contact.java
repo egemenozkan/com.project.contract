@@ -1,6 +1,12 @@
 package com.project.api.data.model.common;
 
-public class Contact {
+import java.io.Serializable;
+
+public class Contact implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6652432491661745311L;
 	private long id;
 	private String phone;
 	private String whatsapp;

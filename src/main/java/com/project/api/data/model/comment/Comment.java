@@ -80,11 +80,9 @@ public class Comment {
 	public void setUser(CommentUser user) {
 		this.user = user;
 	}
-
 	public Language getLanguage() {
 		return language;
 	}
-
 	public void setLanguage(Language language) {
 		this.language = language;
 	}

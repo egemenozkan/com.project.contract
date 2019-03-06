@@ -10,6 +10,7 @@ public class EventLandingPage {
 	private String title;
 	private String keywords;
 	private String description;
+	private String slug;
 	private List<Content> contents;
 	private Language language;
 	private Event event;
@@ -68,6 +69,14 @@ public class EventLandingPage {
 
 	public void setEvent(Event event) {
 		this.event = event;
+	}
+
+	public String getSlug() {
+		return slug;
+	}
+
+	public void setSlug(String slug) {
+		this.slug = slug;
 	}
 
 }

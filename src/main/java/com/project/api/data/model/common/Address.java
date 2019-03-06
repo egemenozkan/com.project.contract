@@ -1,8 +1,10 @@
 package com.project.api.data.model.common;
 
+import java.io.Serializable;
+
 import com.project.api.data.enums.AddressType;
 
-public class Address {
+public class Address implements Serializable{
 	private long id;
 	private AddressType type;
 	private String addressTitle;

@@ -1,5 +1,6 @@
 package com.project.api.data.model.place;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Map;
 
@@ -8,7 +9,11 @@ import com.project.api.data.enums.PlaceType;
 import com.project.api.data.model.common.Address;
 import com.project.api.data.model.common.Contact;
 
-public class Place {
+public class Place implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5779998595076999777L;
 	private long id;
 	private String name;
 	private Language language;

@@ -1,16 +1,22 @@
 package com.project.api.data.model.place;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.project.api.data.enums.Language;
 import com.project.api.data.model.common.Content;
 
-public class PlaceLandingPage {
+public class PlaceLandingPage implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9056090986462784786L;
 	private long id;
 	private String title;
 	private String keywords;
 	private String description;
+	private String slug;
 	private List<Content> contents;
 	private Language language;
 	private Place place;
@@ -69,6 +75,14 @@ public class PlaceLandingPage {
 
 	public void setPlace(Place place) {
 		this.place = place;
+	}
+
+	public String getSlug() {
+		return slug;
+	}
+
+	public void setSlug(String slug) {
+		this.slug = slug;
 	}
 
 	

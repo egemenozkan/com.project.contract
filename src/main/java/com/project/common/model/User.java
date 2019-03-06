@@ -34,6 +34,10 @@ public class User implements UserDetails {
 		this.credentialsNonExpired = true;
 		this.enabled = true;
 	}
+	
+	public User(Long id) {
+		this.id = id;
+	}
 
 	@Override
 	public boolean isAccountNonExpired() {
