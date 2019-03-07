@@ -22,7 +22,35 @@ public class User implements UserDetails {
 	private String lastName;
 	private String email;
 	private UserType userType;
+	
+	private String facebookId;
+	private String googleId;
+	private String vkontakteId;
 	// private Company company;
+
+	public String getFacebookId() {
+		return facebookId;
+	}
+
+	public void setFacebookId(String facebookId) {
+		this.facebookId = facebookId;
+	}
+
+	public String getGoogleId() {
+		return googleId;
+	}
+
+	public void setGoogleId(String googleId) {
+		this.googleId = googleId;
+	}
+
+	public String getVkontakteId() {
+		return vkontakteId;
+	}
+
+	public void setVkontakteId(String vkontakteId) {
+		this.vkontakteId = vkontakteId;
+	}
 
 	private List<String> roles;
 
