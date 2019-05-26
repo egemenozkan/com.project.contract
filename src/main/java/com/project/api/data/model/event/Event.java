@@ -2,6 +2,7 @@ package com.project.api.data.model.event;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -11,6 +12,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.project.api.data.enums.EventPeriodType;
 import com.project.api.data.enums.EventType;
 import com.project.api.data.enums.Language;
+import com.project.api.data.model.file.MyFile;
 import com.project.api.data.model.place.Localisation;
 import com.project.api.data.model.place.Place;
 import com.project.api.data.utils.LocalDateDeserializer;
@@ -28,6 +30,7 @@ public class Event {
 	private Map<String, Localisation> localisation;
 	private Place place;
 	private EventPeriodType periodType;
+	private int[] days;
     @JsonDeserialize(using = LocalDateDeserializer.class)
     @JsonSerialize(using = LocalDateSerializer.class)
     @DateTimeFormat(pattern = "dd.MM.yyyy")
@@ -47,6 +50,10 @@ public class Event {
 	private boolean showStartTime;
 	private boolean showEndTime;
 
+	private List<MyFile> images;
+
+	private MyFile mainImage;
+	
 	public long getId() {
 		return id;
 	}
@@ -166,5 +173,30 @@ public class Event {
 	public void setShowEndTime(boolean showEndTime) {
 		this.showEndTime = showEndTime;
 	}
+	
+	public List<MyFile> getImages() {
+		return images;
+	}
+
+	public void setImages(List<MyFile> images) {
+		this.images = images;
+	}
+
+	public MyFile getMainImage() {
+		return mainImage;
+	}
+
+	public void setMainImage(MyFile mainImage) {
+		this.mainImage = mainImage;
+	}
+
+	public int[] getDays() {
+		return days;
+	}
+
+	public void setDays(int[] days) {
+		this.days = days;
+	}
+
 
 }

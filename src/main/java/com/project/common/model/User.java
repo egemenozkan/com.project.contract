@@ -23,6 +23,8 @@ public class User implements UserDetails {
 	private String email;
 	private UserType userType;
 	
+	private String pictureUrl;
+	
 	private String facebookId;
 	private String googleId;
 	private String vkontakteId;
@@ -181,5 +183,13 @@ public class User implements UserDetails {
 
 	public void setUserType(UserType userType) {
 		this.userType = userType;
+	}
+
+	public String getPictureUrl() {
+		return pictureUrl;
+	}
+
+	public void setPictureUrl(String pictureUrl) {
+		this.pictureUrl = pictureUrl;
 	}
 }

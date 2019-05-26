@@ -14,6 +14,8 @@ public class EventRequest {
 	private LocalDate startDate;
 	private LocalDate endDate;
 	private Language language;
+	private int limit;
+	private Boolean random;
 
 	public long getId() {
 		return id;
@@ -69,6 +71,22 @@ public class EventRequest {
 
 	public void setLanguage(Language language) {
 		this.language = language;
+	}
+
+	public int getLimit() {
+		return limit;
+	}
+
+	public void setLimit(int limit) {
+		this.limit = limit;
+	}
+
+	public Boolean getRandom() {
+		return random;
+	}
+
+	public void setRandom(Boolean random) {
+		this.random = random;
 	}
 
 }

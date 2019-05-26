@@ -2,12 +2,14 @@ package com.project.api.data.model.place;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Map;
 
 import com.project.api.data.enums.Language;
 import com.project.api.data.enums.PlaceType;
 import com.project.api.data.model.common.Address;
 import com.project.api.data.model.common.Contact;
+import com.project.api.data.model.file.MyFile;
 
 public class Place implements Serializable {
 	/**
@@ -27,7 +29,18 @@ public class Place implements Serializable {
 	
 	private LocalDateTime createDateTime;
 	private LocalDateTime updateDateTime;
+	
+	private List<MyFile> images;
+	private MyFile mainImage;
 
+
+	public MyFile getMainImage() {
+		return mainImage;
+	}
+
+	public void setMainImage(MyFile mainImage) {
+		this.mainImage = mainImage;
+	}
 
 	public long getId() {
 		return id;
@@ -108,6 +121,14 @@ public class Place implements Serializable {
 
 	public void setContact(Contact contact) {
 		this.contact = contact;
+	}
+
+	public List<MyFile> getImages() {
+		return images;
+	}
+
+	public void setImages(List<MyFile> images) {
+		this.images = images;
 	}
 
 //	public HashMap<String, Localisation> getLocalisation() {
