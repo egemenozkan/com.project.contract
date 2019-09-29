@@ -1,6 +1,6 @@
 package com.project.api.data.enums;
 
-public enum EventPeriodType {
+public enum PeriodType {
 	ALL(1), WEEKDAYS(2), WEEKENDS(3), FRIDAYS_AND_SATURDAYS(4),
 	MONDAYS(11), TUESDAYS(12), WEDNESDAYS(13), THURSDAYS(14), FRIDAYS(15), SATURDAYS(16), SUNDAYS(17),
 	UNORDINARY(21), 
@@ -9,17 +9,17 @@ public enum EventPeriodType {
 
 	private final int id;
 
-	private EventPeriodType(int id) {
+	private PeriodType(int id) {
 		this.id = id;
 	}
 
-	public static EventPeriodType getById(int id) {
-		for (EventPeriodType type : EventPeriodType.values()) {
+	public static PeriodType getById(int id) {
+		for (PeriodType type : PeriodType.values()) {
 			if (type.id == id) {
 				return type;
 			}
 		}
-		return EventPeriodType.NOTSET;
+		return PeriodType.NOTSET;
 	}
 	
 	public int getId() {

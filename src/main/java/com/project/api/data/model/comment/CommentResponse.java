@@ -2,17 +2,17 @@ package com.project.api.data.model.comment;
 
 import java.util.List;
 
-public class PlaceCommentResponse {
-	private long placeId;
+public class CommentResponse {
+	private long id;
 	private List<Comment> comments;
 	private boolean success;
 
-	public long getPlaceId() {
-		return placeId;
+	public long getId() {
+		return id;
 	}
 
-	public void setPlaceId(long placeId) {
-		this.placeId = placeId;
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public List<Comment> getComments() {
@@ -23,20 +23,20 @@ public class PlaceCommentResponse {
 		this.comments = comments;
 	}
 
-	public int getSize() {
-		if (this.comments == null || this.comments.isEmpty()) {
-			return 0;
-		} else {
-			return this.comments.size();
-		}
-	}
-
 	public boolean isSuccess() {
 		return success;
 	}
 
 	public void setSuccess(boolean success) {
 		this.success = success;
+	}
+
+	public int getSize() {
+		if (this.comments == null || this.comments.isEmpty()) {
+			return 0;
+		} else {
+			return this.comments.size();
+		}
 	}
 
 }

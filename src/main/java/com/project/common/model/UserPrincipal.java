@@ -1,30 +1,47 @@
 package com.project.common.model;
 
-import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 
 import com.project.api.data.enums.UserType;
 
-public class User implements Serializable {
+public class UserPrincipal extends User {
 
-	private static final long serialVersionUID = -4454221637535237933L;
+	private static final long serialVersionUID = 5577192456921820944L;
+
+	public UserPrincipal(int id, String firstName, String lastName, String email, String pictureUrl, String username,
+			String password, boolean enabled, boolean accountNonExpired, boolean credentialsNonExpired,
+			boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities) {
+		super(username, password, enabled, accountNonExpired, credentialsNonExpired, accountNonLocked, authorities);
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.pictureUrl = pictureUrl;
+
+	}
 
 	private int id;
 
-	private String username;
-	private String password;
+//	private String username;
+//	private String password;
 
 	private String firstName;
 	private String lastName;
 	private String email;
 	private UserType userType;
-	
+
 	private String pictureUrl;
-	
+
 	private String facebookId;
 	private String googleId;
 	private String vkontakteId;
+
+	private Map<String, String> userInfo;
 	// private Company company;
 
 	public String getFacebookId() {
@@ -53,25 +70,6 @@ public class User implements Serializable {
 
 	private List<String> roles;
 
-
-
-	
-	public void grantAuthority(String authority) {
-		if (roles == null)
-			roles = new ArrayList<>();
-		roles.add(authority);
-	}
-
-//	@Override
-//	public List<GrantedAuthority> getAuthorities() {
-//		List<GrantedAuthority> authorities = new ArrayList<>();
-//		if (roles != null) {
-//			roles.forEach(role -> authorities.add(new SimpleGrantedAuthority(role)));
-//
-//		}
-//		return authorities;
-//	}
-
 	public List<String> getRoles() {
 		return roles;
 	}
@@ -80,22 +78,12 @@ public class User implements Serializable {
 		this.roles = roles;
 	}
 
-	public String getPassword() {
-		return password;
+	public int getId() {
+		return id;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {
@@ -138,11 +126,23 @@ public class User implements Serializable {
 		this.pictureUrl = pictureUrl;
 	}
 
-	public int getId() {
-		return id;
+	public Map<String, String> getUserInfo() {
+		return userInfo;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setUserInfo(Map<String, String> userInfo) {
+		this.userInfo = userInfo;
 	}
+
+//	@JsonDeserialize(using = GrantedDeserializer.class)
+//	@Override
+//	public Collection<? extends GrantedAuthority> getAuthorities() {
+//		List<GrantedAuthority> authorities = new ArrayList<>();
+//		if (roles != null) {
+//			roles.forEach(role -> authorities.add(new SimpleGrantedAuthority(role)));
+//
+//		}
+//		return authorities;
+//	}
+
 }

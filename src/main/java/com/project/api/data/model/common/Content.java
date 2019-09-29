@@ -1,9 +1,14 @@
 package com.project.api.data.model.common;
 
+import java.io.Serializable;
+
 import com.project.api.data.enums.ContentType;
 import com.project.api.data.enums.Language;
 
-public class Content {
+public class Content implements Serializable {
+	
+	private static final long serialVersionUID = -2817146583114746877L;
+	
 	private int id;
 	private String title;
 	private String description;

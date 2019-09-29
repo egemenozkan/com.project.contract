@@ -1,7 +1,7 @@
 package com.project.api.data.model.common;
 
 import com.project.api.data.enums.PhoneType;
-import com.project.common.model.Country;
+import com.project.api.data.model.gis.Country;
 
 public class Phone {
 	private int id;

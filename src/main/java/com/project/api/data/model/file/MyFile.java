@@ -1,8 +1,7 @@
 package com.project.api.data.model.file;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
-
-import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -11,19 +10,47 @@ import com.project.api.data.utils.LocalDateTimeDeserializer;
 import com.project.api.data.utils.LocalDateTimeSerializer;
 import com.project.common.model.User;
 
-public class MyFile {
-	
+public class MyFile implements Serializable {
+
+	private static final long serialVersionUID = -3173123704696760310L;
+	private static final String IMAGE_SERVER_URL = "https://files.vantalii.com";
 	private long id;
-	private String path;
-	private String url;
+	private String uploadDir;
+	private String name;
+	private String extension;
+
 	private User user;
 	private Status status;
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
+	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
+	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	private LocalDateTime createDateTime;
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
+	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
+	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	private LocalDateTime updateDateTime;
+
+	public String getUploadDir() {
+		return uploadDir;
+	}
+
+	public void setUploadDir(String uploadDir) {
+		this.uploadDir = uploadDir;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getExtension() {
+		return extension;
+	}
+
+	public void setExtension(String extension) {
+		this.extension = extension;
+	}
 
 	public Status getStatus() {
 		return status;
@@ -56,18 +83,20 @@ public class MyFile {
 	public void setId(long id) {
 		this.id = id;
 	}
-
-	public String getPath() {
-		return path;
+	public String getLgUrl() {
+		return IMAGE_SERVER_URL + this.uploadDir + "/" + this.name + "_lg" + "." + this.extension;
 	}
-
-	public void setPath(String path) {
-		this.path = path;
+	public String getMdUrl() {
+		return IMAGE_SERVER_URL + this.uploadDir + "/" + this.name + "_md" + "." + this.extension;
 	}
-
-	public String getUrl() {
-		return "https://files.vantalii.com" + path;
+	public String getSmUrl() {
+		return IMAGE_SERVER_URL+ this.uploadDir + "/" + this.name + "_sm" +"." + this.extension;
 	}
+	
+	public String getXsUrl() {
+		return IMAGE_SERVER_URL + this.uploadDir + "/" + this.name + "_xs" + "." + this.extension;
+	}
+	
 
 	public User getUser() {
 		return user;

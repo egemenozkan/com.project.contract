@@ -28,185 +28,130 @@ public class Vehicle {
     private int maxPassengerLimit;
     private Boolean hasAssistantSeat;
     private VehicleType type;
-    private List<VehicleDocument> documents;
-    private List<TrafficAccident> trafficAccidents;
-    private List<VehicleEquipmentType> equipmentTypes;
-    private List<VehicleCareAndRepair> vehicleCareAndRepairs;
-    private Company ownerCompany;
-    private Boolean vip;
+    private boolean vip;
 
 
     public Long getId() {
-        return id;
-    }
+		return id;
+	}
 
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 
-    public String getCurrentPlate() {
-        return currentPlate;
-    }
+	public String getCurrentPlate() {
+		return currentPlate;
+	}
 
 
-    public void setCurrentPlate(String currentPlate) {
-        this.currentPlate = currentPlate;
-    }
+	public void setCurrentPlate(String currentPlate) {
+		this.currentPlate = currentPlate;
+	}
 
 
-    public String getFrontNumber() {
-        return frontNumber;
-    }
+	public String getFrontNumber() {
+		return frontNumber;
+	}
 
 
-    public void setFrontNumber(String frontNumber) {
-        this.frontNumber = frontNumber;
-    }
+	public void setFrontNumber(String frontNumber) {
+		this.frontNumber = frontNumber;
+	}
 
 
-    public IdValue getBrand() {
-        return brand;
-    }
+	public IdValue getBrand() {
+		return brand;
+	}
 
 
-    public void setBrand(IdValue brand) {
-        this.brand = brand;
-    }
+	public void setBrand(IdValue brand) {
+		this.brand = brand;
+	}
 
 
-    public IdValue getSerial() {
-        return serial;
-    }
+	public IdValue getSerial() {
+		return serial;
+	}
 
 
-    public void setSerial(IdValue serial) {
-        this.serial = serial;
-    }
+	public void setSerial(IdValue serial) {
+		this.serial = serial;
+	}
 
 
-    public IdValue getModel() {
-        return model;
-    }
+	public IdValue getModel() {
+		return model;
+	}
 
 
-    public void setModel(IdValue model) {
-        this.model = model;
-    }
+	public void setModel(IdValue model) {
+		this.model = model;
+	}
 
 
-    public LocalDate getFirstRegistrationDate() {
-        return firstRegistrationDate;
-    }
+	public LocalDate getFirstRegistrationDate() {
+		return firstRegistrationDate;
+	}
 
 
-    public void setFirstRegistrationDate(LocalDate firstRegistrationDate) {
-        this.firstRegistrationDate = firstRegistrationDate;
-    }
+	public void setFirstRegistrationDate(LocalDate firstRegistrationDate) {
+		this.firstRegistrationDate = firstRegistrationDate;
+	}
 
 
-    public IdValue getColor() {
-        return color;
-    }
+	public IdValue getColor() {
+		return color;
+	}
 
 
-    public void setColor(IdValue color) {
-        this.color = color;
-    }
+	public void setColor(IdValue color) {
+		this.color = color;
+	}
 
 
-    public int getMaxPassengerLimit() {
-        return maxPassengerLimit;
-    }
+	public int getMaxPassengerLimit() {
+		return maxPassengerLimit;
+	}
 
 
-    public void setMaxPassengerLimit(int maxPassengerLimit) {
-        this.maxPassengerLimit = maxPassengerLimit;
-    }
+	public void setMaxPassengerLimit(int maxPassengerLimit) {
+		this.maxPassengerLimit = maxPassengerLimit;
+	}
 
 
-    public Boolean getHasAssistantSeat() {
-        return hasAssistantSeat;
-    }
+	public Boolean getHasAssistantSeat() {
+		return hasAssistantSeat;
+	}
 
 
-    public void setHasAssistantSeat(Boolean hasAssistantSeat) {
-        this.hasAssistantSeat = hasAssistantSeat;
-    }
+	public void setHasAssistantSeat(Boolean hasAssistantSeat) {
+		this.hasAssistantSeat = hasAssistantSeat;
+	}
 
 
-    public VehicleType getType() {
-        return type;
-    }
+	public VehicleType getType() {
+		return type;
+	}
 
 
-    public void setType(VehicleType type) {
-        this.type = type;
-    }
+	public void setType(VehicleType type) {
+		this.type = type;
+	}
 
 
-    public List<VehicleDocument> getDocuments() {
-        return documents;
-    }
+	public boolean isVip() {
+		return vip;
+	}
 
 
-    public void setDocuments(List<VehicleDocument> documents) {
-        this.documents = documents;
-    }
+	public void setVip(boolean vip) {
+		this.vip = vip;
+	}
 
 
-    public List<TrafficAccident> getTrafficAccidents() {
-        return trafficAccidents;
-    }
-
-
-    public void setTrafficAccidents(List<TrafficAccident> trafficAccidents) {
-        this.trafficAccidents = trafficAccidents;
-    }
-
-
-    public List<VehicleEquipmentType> getEquipmentTypes() {
-        return equipmentTypes;
-    }
-
-
-    public void setEquipmentTypes(List<VehicleEquipmentType> equipmentTypes) {
-        this.equipmentTypes = equipmentTypes;
-    }
-
-
-    public List<VehicleCareAndRepair> getVehicleCareAndRepairs() {
-        return vehicleCareAndRepairs;
-    }
-
-
-    public void setVehicleCareAndRepairs(List<VehicleCareAndRepair> vehicleCareAndRepairs) {
-        this.vehicleCareAndRepairs = vehicleCareAndRepairs;
-    }
-
-
-    public Company getOwnerCompany() {
-        return ownerCompany;
-    }
-
-
-    public void setOwnerCompany(Company ownerCompany) {
-        this.ownerCompany = ownerCompany;
-    }
-
-
-    public Boolean getVip() {
-	return vip;
-    }
-
-
-    public void setVip(Boolean vip) {
-	this.vip = vip;
-    }
-
-
-    @Override
+	@Override
     public boolean equals(Object o) {
         if (o instanceof Vehicle) {
             Vehicle toCompare = (Vehicle) o;

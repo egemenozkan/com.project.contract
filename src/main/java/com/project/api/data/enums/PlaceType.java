@@ -1,24 +1,27 @@
 package com.project.api.data.enums;
 
 public enum PlaceType {
-	ALL(1, null), HOTEL(2, MainType.LODGING), AIRPORT(3, MainType.TRANSPORT), BUS_TERMINAL(4, MainType.TRANSPORT), MALL(5,
-			MainType.SHOPPING), RESTAURANT(6, MainType.FOOD_AND_BEVERAGE), MUSEUM(8, MainType.ATTRACTIONS), FAST_FOOD(9,
-					MainType.FOOD_AND_BEVERAGE), MARKETPLACE(10, MainType.SHOPPING), NATURE_AND_PARK(11, MainType.ATTRACTIONS), WATERFALL(
-							12, MainType.ATTRACTIONS), TAXI_STATION(13, MainType.TRANSPORT), HISTORIC_SITE(14,
-									MainType.ATTRACTIONS), FOREST_AND_PICNIC(14, MainType.ATTRACTIONS), HOSPITAL(15,
-											MainType.HEALTH), CINEMA(16, MainType.ENTERTAINMENT), BEACH(17, MainType.ATTRACTIONS), CANYON(
-													18, MainType.ATTRACTIONS), THEATHER(19, MainType.ENTERTAINMENT), NIGHT_CLUB(20,
-															MainType.ENTERTAINMENT), BAR(21, MainType.FOOD_AND_BEVERAGE), MUNICIPALITY(22,
-																	MainType.PUBLIC_ENTERPRISE), CONSULATE(22,
-																			MainType.PUBLIC_ENTERPRISE), THEME_PARK(23,
-																					MainType.ATTRACTIONS), NOTSET(0, null);
+	ALL(1, null, "all"), HOTEL(2, MainType.LODGING, "hotel"), AIRPORT(3, MainType.TRANSPORT, "airport"),
+	BUS_TERMINAL(4, MainType.TRANSPORT, "bus-terminal"), MALL(5, MainType.SHOPPING, "mall"),
+	RESTAURANT(6, MainType.FOOD_AND_BEVERAGE, "restaurant"), MUSEUM(8, MainType.ATTRACTIONS, "museum"),
+	FAST_FOOD(9, MainType.FOOD_AND_BEVERAGE, "fast-food"), MARKETPLACE(10, MainType.SHOPPING, "marketplace-bazaar"), 
+	NATURE_AND_PARK(11, MainType.ATTRACTIONS, "nature-and-park"), WATERFALL(12, MainType.ATTRACTIONS, "waterfall"),
+	TAXI_STATION(13, MainType.TRANSPORT, "taxi-station"), HISTORIC_SITE(14,	MainType.ATTRACTIONS, "historic-site"),
+	FOREST_AND_PICNIC(14, MainType.ATTRACTIONS, "forest-and-picnic"), HOSPITAL(15, MainType.HEALTH, "hospital"),
+	CINEMA(16, MainType.ENTERTAINMENT, "cinema"), BEACH(17, MainType.ATTRACTIONS, "beach"),
+	CANYON(18, MainType.ATTRACTIONS, "canyon"), THEATHER(19, MainType.ENTERTAINMENT, "theather"),
+	NIGHT_CLUB(20, MainType.ENTERTAINMENT, "night-club"), BAR(21, MainType.FOOD_AND_BEVERAGE, "bar"), 
+	MUNICIPALITY(22, MainType.PUBLIC_ENTERPRISE, "municipality"), CONSULATE(22, MainType.PUBLIC_ENTERPRISE, "consulate"),
+	THEME_PARK(23, MainType.ATTRACTIONS, "theme-park"), NOTSET(0, null, "notset");
 
 	private final int id;
 	private final MainType mainType;
+	private final String slug;
 
-	private PlaceType(int id, MainType mainType) {
+	private PlaceType(int id, MainType mainType, String slug) {
 		this.id = id;
 		this.mainType = mainType;
+		this.slug = slug;
 	}
 
 	public static PlaceType getById(int id) {
@@ -41,7 +44,7 @@ public enum PlaceType {
 
 	public static PlaceType getBySlug(String slug) {
 		for (PlaceType type : PlaceType.values()) {
-			if (type.toString().toLowerCase().replaceAll("_", "-").equalsIgnoreCase(slug)) {
+			if (type.getSlug().equalsIgnoreCase(slug)) {
 				return type;
 			}
 		}
@@ -54,5 +57,9 @@ public enum PlaceType {
 
 	public MainType getMainType() {
 		return mainType;
+	}
+
+	public String getSlug() {
+		return slug;
 	}
 }

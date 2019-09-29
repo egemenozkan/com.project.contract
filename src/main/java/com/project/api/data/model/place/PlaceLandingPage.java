@@ -8,10 +8,8 @@ import com.project.api.data.model.common.Content;
 
 public class PlaceLandingPage implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 9056090986462784786L;
+
 	private long id;
 	private String title;
 	private String keywords;
@@ -20,6 +18,17 @@ public class PlaceLandingPage implements Serializable {
 	private List<Content> contents;
 	private Language language;
 	private Place place;
+
+	public String getUrl() {
+		StringBuilder strBuilder = new StringBuilder("/");
+		if (this.language == Language.RUSSIAN) {
+			strBuilder.append("places/").append(this.slug);
+		} else {
+			strBuilder.append(this.language.toString().toLowerCase()).append("/places/").append(this.slug);
+		}
+
+		return strBuilder.toString();
+	}
 
 	public long getId() {
 		return id;
@@ -85,5 +94,4 @@ public class PlaceLandingPage implements Serializable {
 		this.slug = slug;
 	}
 
-	
 }

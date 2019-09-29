@@ -1,11 +1,17 @@
 package com.project.api.data.model.event;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.project.api.data.enums.Language;
 import com.project.api.data.model.common.Content;
 
-public class EventLandingPage {
+public class EventLandingPage implements Serializable {
+
+	private static final long serialVersionUID = 2517340320654743895L;
+	
+	/** **/
+	
 	private long id;
 	private String title;
 	private String keywords;
@@ -14,6 +20,19 @@ public class EventLandingPage {
 	private List<Content> contents;
 	private Language language;
 	private Event event;
+
+	public String getUrl() {
+		StringBuilder strBuilder = new StringBuilder("/");
+		if (this.language == Language.RUSSIAN) {
+			strBuilder.append("events/").append(this.slug);
+		} else {
+			strBuilder.append(this.language.toString().toLowerCase()).append("/events/").append(this.slug);
+		}
+		if (this.event != null && this.event.getTimeTableId() > 0) {
+			strBuilder.append("?tmid=").append(event.getTimeTableId());
+		}
+		return strBuilder.toString();
+	}
 
 	public long getId() {
 		return id;

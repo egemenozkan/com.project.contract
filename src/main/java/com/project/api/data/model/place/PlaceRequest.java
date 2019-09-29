@@ -11,6 +11,12 @@ public class PlaceRequest {
 	private Language language;
 	private int limit;
 	private Boolean random;
+	private boolean hideAddress;
+	private boolean hideContact;
+	private boolean hideContent;
+	private boolean hideImages;
+	private boolean hideMainImage;
+	private boolean hideTimeTable;
 
 	public long getId() {
 		return id;
@@ -59,5 +65,54 @@ public class PlaceRequest {
 	public void setLimit(int limit) {
 		this.limit = limit;
 	}
+
+	public boolean isHideAddress() {
+		return hideAddress;
+	}
+
+	public void setHideAddress(boolean hideAddress) {
+		this.hideAddress = hideAddress;
+	}
+
+	public boolean isHideContact() {
+		return hideContact;
+	}
+
+	public void setHideContact(boolean hideContact) {
+		this.hideContact = hideContact;
+	}
+
+	public boolean isHideContent() {
+		return hideContent;
+	}
+
+	public void setHideContent(boolean hideContent) {
+		this.hideContent = hideContent;
+	}
+
+	public boolean isHideImages() {
+		return hideImages;
+	}
+
+	public void setHideImages(boolean hideImages) {
+		this.hideImages = hideImages;
+	}
+
+	public boolean isHideMainImage() {
+		return hideMainImage;
+	}
+
+	public void setHideMainImage(boolean hideMainImage) {
+		this.hideMainImage = hideMainImage;
+	}
+
+	public boolean isHideTimeTable() {
+		return hideTimeTable;
+	}
+
+	public void setHideTimeTable(boolean hideTimeTable) {
+		this.hideTimeTable = hideTimeTable;
+	}
+
 
 }

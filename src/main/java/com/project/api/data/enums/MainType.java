@@ -1,13 +1,16 @@
 package com.project.api.data.enums;
 
 public enum MainType {
-	ALL(1), LODGING(2), TRANSPORT(3), SHOPPING(4), FOOD_AND_BEVERAGE(5), ATTRACTIONS(6), HEALTH(7), ENTERTAINMENT(8), PUBLIC_ENTERPRISE(
-			9), NOTSET(0);
+	ALL(1, "all"), LODGING(2, "lodging"), TRANSPORT(3, "transport"), SHOPPING(4, "shopping"),
+	FOOD_AND_BEVERAGE(5, "food-and-beverage"), ATTRACTIONS(6, "attractions"), HEALTH(7, "health"),
+	ENTERTAINMENT(8, "entertainment"), PUBLIC_ENTERPRISE(9, "public-enterprise"), NOTSET(0, "notset");
 
 	private final int id;
+	private final String slug;
 
-	private MainType(int id) {
+	private MainType(int id, String slug) {
 		this.id = id;
+		this.slug = slug;
 	}
 
 	public static MainType getById(int id) {
@@ -21,7 +24,7 @@ public enum MainType {
 
 	public static MainType getBySlug(String slug) {
 		for (MainType type : MainType.values()) {
-			if (type.toString().toLowerCase().replaceAll("_", "-").equalsIgnoreCase(slug)) {
+			if (type.getSlug().equalsIgnoreCase(slug)) {
 				return type;
 			}
 		}
@@ -30,5 +33,9 @@ public enum MainType {
 
 	public int getId() {
 		return id;
+	}
+
+	public String getSlug() {
+		return slug;
 	}
 }

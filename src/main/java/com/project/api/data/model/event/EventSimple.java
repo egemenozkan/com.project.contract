@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import com.project.api.data.enums.EventType;
 import com.project.api.data.enums.Language;
 import com.project.api.data.model.place.Place;
 
