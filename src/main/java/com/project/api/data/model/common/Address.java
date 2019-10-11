@@ -1,8 +1,13 @@
 package com.project.api.data.model.common;
 
+import java.io.Serializable;
+
 import com.project.api.data.enums.AddressType;
 
-public class Address {
+public class Address implements Serializable {
+
+	private static final long serialVersionUID = -7474458651344956407L;
+
 	private long id;
 	private AddressType type;
 	private String addressTitle;
@@ -16,6 +21,8 @@ public class Address {
 	private String subregion;
 	private int regionId;
 	private String region;
+	private int districtId;
+	private String district;
 	private int cityId;
 	private String city;
 	private int countryId;
@@ -123,6 +130,22 @@ public class Address {
 
 	public void setRegion(String region) {
 		this.region = region;
+	}
+
+	public int getDistrictId() {
+		return districtId;
+	}
+
+	public void setDistrictId(int districtId) {
+		this.districtId = districtId;
+	}
+
+	public String getDistrict() {
+		return district;
+	}
+
+	public void setDistrict(String district) {
+		this.district = district;
 	}
 
 	public int getCityId() {

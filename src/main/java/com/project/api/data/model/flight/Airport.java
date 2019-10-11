@@ -1,6 +1,5 @@
 package com.project.api.data.model.flight;
 
-import com.project.api.data.model.common.Location;
 import com.project.api.data.model.place.Place;
 
 public class Airport extends Place {

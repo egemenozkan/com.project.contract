@@ -1,10 +1,10 @@
 package com.project.api.data.enums;
 
 public enum Language {
-	ALL(1, "ALL"), TURKISH(2, "TR"), RUSSIAN(3, "RU"), ENGLISH(4, "EN"), GERMAN(5, "DE"),  NOTSET(0, "NS"),;
+	ALL(1, "ALL"), TURKISH(2, "TR"), RUSSIAN(3, "RU"), ENGLISH(4, "EN"), GERMAN(5, "DE"), FARSI(6, "FA"), DUTCH(7, "NL"), NOTSET(0, "NS"),;
 
-	private final int id;
-	private final String code;
+	private int id;
+	private String code;
 
 	private Language(int id, String code) {
 		this.id = id;
@@ -19,16 +19,16 @@ public enum Language {
 		}
 		return Language.NOTSET;
 	}
-	
+
 	public static Language getByCode(String code) {
 		for (Language type : Language.values()) {
-			if (code.equals(type.code)) {
+			if (type.code.equalsIgnoreCase(code)) {
 				return type;
 			}
 		}
 		return Language.NOTSET;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
