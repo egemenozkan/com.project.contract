@@ -17,6 +17,7 @@ public class PlaceRequest {
 	private boolean hideImages;
 	private boolean hideMainImage;
 	private boolean hideTimeTable;
+	private String[] types;
 
 	public long getId() {
 		return id;
@@ -112,6 +113,14 @@ public class PlaceRequest {
 
 	public void setHideTimeTable(boolean hideTimeTable) {
 		this.hideTimeTable = hideTimeTable;
+	}
+
+	public String[] getTypes() {
+		return types;
+	}
+
+	public void setTypes(String[] types) {
+		this.types = types;
 	}
 
 
