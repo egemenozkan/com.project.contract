@@ -12,7 +12,8 @@ public enum PlaceType {
 	CANYON(18, MainType.ATTRACTIONS, "canyon"), THEATHER(19, MainType.ENTERTAINMENT, "theather"),
 	NIGHT_CLUB(20, MainType.ENTERTAINMENT, "night-club"), BAR(21, MainType.FOOD_AND_BEVERAGE, "bar"), 
 	MUNICIPALITY(22, MainType.PUBLIC_ENTERPRISE, "municipality"), CONSULATE(22, MainType.PUBLIC_ENTERPRISE, "consulate"),
-	THEME_PARK(23, MainType.ATTRACTIONS, "theme-park"), NOTSET(0, null, "notset");
+	THEME_PARK(23, MainType.ATTRACTIONS, "theme-park"), CONGRESS_AND_EXHIBITON_CENTER(24, MainType.ATTRACTIONS, "congress_and_exhibition_center"),
+	NOTSET(0, null, "notset");
 
 	private final int id;
 	private final MainType mainType;

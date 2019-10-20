@@ -18,6 +18,8 @@ public class PlaceRequest {
 	private boolean hideMainImage;
 	private boolean hideTimeTable;
 	private String[] types;
+	private int cityId;
+	private int districtId;
 
 	public long getId() {
 		return id;
@@ -121,6 +123,22 @@ public class PlaceRequest {
 
 	public void setTypes(String[] types) {
 		this.types = types;
+	}
+
+	public int getCityId() {
+		return cityId;
+	}
+
+	public void setCityId(int cityId) {
+		this.cityId = cityId;
+	}
+
+	public int getDistrictId() {
+		return districtId;
+	}
+
+	public void setDistrictId(int districtId) {
+		this.districtId = districtId;
 	}
 
 

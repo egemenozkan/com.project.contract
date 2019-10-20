@@ -76,7 +76,7 @@ public class Event implements Serializable {
 	/* if event lasts all day. */
 	private FeeType feeType;
 	
-	
+	private String biletixId;
 	
 	public Event getMaster() {
 		return master;
@@ -302,6 +302,14 @@ public class Event implements Serializable {
 
 	public void setStatus(EventStatus status) {
 		this.status = status;
+	}
+
+	public String getBiletixId() {
+		return biletixId;
+	}
+
+	public void setBiletixId(String biletixId) {
+		this.biletixId = biletixId;
 	}
 
 }
