@@ -16,8 +16,8 @@ public enum TransferRegionEnum {
 	GOYNUK(12, "Göynük"),
 	SIDE(13, "Side"),
 	COLAKLI(14, "Çolaklı"),
-	MANAVGAT(15, "Manavgat");
-
+	MANAVGAT(15, "Manavgat"),
+	ALANYA(16, "Alanya");
 
 
 	// @formatter:on	

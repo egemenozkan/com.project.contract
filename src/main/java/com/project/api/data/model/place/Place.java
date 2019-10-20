@@ -29,6 +29,7 @@ public class Place implements Serializable {
 	private String slug;
 
 	private Map<String, Localisation> localisation;
+
 	private PlaceType type;
 	private Address address;
 	private Contact contact;
@@ -102,9 +103,16 @@ public class Place implements Serializable {
 	@JsonDeserialize(using = LocalTimeDeserializer.class)
 	@JsonSerialize(using = LocalTimeSerializer.class)
 	@DateTimeFormat(pattern = "HH:mm")
-	private LocalTime closingTime;	
-	
+	private LocalTime closingTime;
+
 	private boolean twentyFourSeven;
+
+	public Place(long id) {
+		this.id = id;
+	}
+
+	public Place() {
+	}
 
 	public String getUrl() {
 		if (this.language == null) {
@@ -218,7 +226,8 @@ public class Place implements Serializable {
 
 	public boolean isOpen() {
 		if (this.openingTime != null && this.closingTime != null) {
-			return (LocalTime.now().compareTo(this.openingTime) >= 0 && LocalTime.now().compareTo(this.closingTime) <= 0);
+			return (LocalTime.now().compareTo(this.openingTime) >= 0
+					&& LocalTime.now().compareTo(this.closingTime) <= 0);
 		}
 		return this.isTwentyFourSeven();
 	}

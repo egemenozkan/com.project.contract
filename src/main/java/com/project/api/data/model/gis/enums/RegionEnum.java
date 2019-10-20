@@ -25,8 +25,8 @@ public enum RegionEnum {
 	SIDE_CENTER(21, "Side Şehir Merkezi", "Side Centrum", DistrictEnum.MANAVGAT, TransferRegionEnum.SIDE),
 	COLAKLI(22, "Çolaklı", "Colakli", DistrictEnum.ALANYA, TransferRegionEnum.COLAKLI),
 	MANAVGAT(27, "Manavgat", "Manavgat", DistrictEnum.MANAVGAT, TransferRegionEnum.COLAKLI),
-	ALTINOVA(28, "Altınova", "Altinova", DistrictEnum.KEPEZ, TransferRegionEnum.AIRPORT);
-
+	ALTINOVA(28, "Altınova", "Altinova", DistrictEnum.KEPEZ, TransferRegionEnum.AIRPORT),
+	ALANYA_CENTER(22, "Alanya Şehir Merkezi", "Alanya Centrum", DistrictEnum.ALANYA, TransferRegionEnum.ALANYA);
 
 
 
