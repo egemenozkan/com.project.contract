@@ -13,6 +13,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.project.api.data.enums.Language;
 import com.project.api.data.enums.PeriodType;
 import com.project.api.data.enums.PlaceType;
+import com.project.api.data.model.Facility;
 import com.project.api.data.model.common.Address;
 import com.project.api.data.model.common.Contact;
 import com.project.api.data.model.file.MyFile;
@@ -39,6 +40,8 @@ public class Place implements Serializable {
 
 	private List<MyFile> images;
 	private MyFile mainImage;
+	
+	private List<Facility> facilities;
 
 	private long timeTableId;
 
@@ -238,6 +241,14 @@ public class Place implements Serializable {
 
 	public void setClosingTime(LocalTime closingTime) {
 		this.closingTime = closingTime;
+	}
+
+	public List<Facility> getFacilities() {
+		return facilities;
+	}
+
+	public void setFacilities(List<Facility> facilities) {
+		this.facilities = facilities;
 	}
 
 }
