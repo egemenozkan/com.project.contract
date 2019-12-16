@@ -20,6 +20,7 @@ public class PlaceRequest {
 	private String[] types;
 	private int cityId;
 	private int districtId;
+	private String name;
 
 	public long getId() {
 		return id;
@@ -139,6 +140,14 @@ public class PlaceRequest {
 
 	public void setDistrictId(int districtId) {
 		this.districtId = districtId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 
