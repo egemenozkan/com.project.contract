@@ -34,8 +34,10 @@ public class Event implements Serializable {
 	private String slug;
 	private Map<String, Localisation> localisation;
 	private Place place;
+		
 	
 	/* TimeTable Data */
+	private boolean usePlaceTimeTable;
 	private long timeTableId;
 	private PeriodType periodType;
 	private int[] days;
@@ -310,6 +312,14 @@ public class Event implements Serializable {
 
 	public void setBiletixId(String biletixId) {
 		this.biletixId = biletixId;
+	}
+
+	public boolean isUsePlaceTimeTable() {
+		return usePlaceTimeTable;
+	}
+
+	public void setUsePlaceTimeTable(boolean usePlaceTimeTable) {
+		this.usePlaceTimeTable = usePlaceTimeTable;
 	}
 
 }

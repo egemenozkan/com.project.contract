@@ -19,6 +19,10 @@ public class EventRequest {
 	private Boolean distinct;
 	private long timeTableId;
 	private EventStatus status;
+	private String name;
+	private String[] districts;
+	private String[] regions;
+	private boolean hidePlace;
 
 	public long getId() {
 		return id;
@@ -122,6 +126,38 @@ public class EventRequest {
 
 	public void setStatus(EventStatus status) {
 		this.status = status;
+	}
+
+	public boolean isHidePlace() {
+		return hidePlace;
+	}
+
+	public void setHidePlace(boolean hidePlace) {
+		this.hidePlace = hidePlace;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String[] getDistricts() {
+		return districts;
+	}
+
+	public void setDistricts(String[] districts) {
+		this.districts = districts;
+	}
+
+	public String[] getRegions() {
+		return regions;
+	}
+
+	public void setRegions(String[] regions) {
+		this.regions = regions;
 	}
 
 }

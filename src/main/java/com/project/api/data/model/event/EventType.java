@@ -1,14 +1,19 @@
 package com.project.api.data.model.event;
 
 public enum EventType {
-	ALL(1), CONCERT(2), DANCE_AND_BALLET(3), OPERA(4), MUSICALS(5), THEATER(6), LIVE_MUSIC(7), ATHLETICS(8), BASKETBALL(9),
-	GOLF(10), SOCCER(11), EXHIBITIONS(12), FESTIVALS(13), VISITOR_ATTRACTIONS(14), TRANSPORT(15), MUSEUMS(16),
-	FAMILY_SHOWS(17), SHOPPING(18), DISCOUNTS(19), EXCURSIONS(20), STAND_UP(21), NOTSET(0);
+	ALL(1, ""), CONCERT(2, "concert"), DANCE_AND_BALLET(3, "dance-and-ballet"), OPERA(4, "opera"),
+	MUSICALS(5, "musicals"), THEATER(6, "theater"), LIVE_MUSIC(7, "life-music"), ATHLETICS(8, "atheletics"),
+	BASKETBALL(9, "basketball"), GOLF(10, "golf"), SOCCER(11, "soccer"), EXHIBITIONS(12, "exhibitions"),
+	FESTIVALS(13, "festivals"), VISITOR_ATTRACTIONS(14, "visitor-attractions"), TRANSPORT(15, "transport"),
+	MUSEUMS(16, "museums"), FAMILY_SHOWS(17, "family-shows"), SHOPPING(18, "shopping"), DISCOUNTS(19, "discounts"),
+	EXCURSIONS(20, "excursions"), STAND_UP(21, "stand-up"), CINEMA(22, "cinema"), NOTSET(0, "");
 
 	private final int id;
+	private final String slug;
 
-	private EventType(int id) {
+	private EventType(int id, String slug) {
 		this.id = id;
+		this.slug = slug;
 	}
 
 	public static EventType getById(int id) {
@@ -19,8 +24,21 @@ public enum EventType {
 		}
 		return EventType.NOTSET;
 	}
+	
+	public static EventType getBySlug(String slug) {
+		for (EventType type : EventType.values()) {
+			if (type.getSlug().equalsIgnoreCase(slug)) {
+				return type;
+			}
+		}
+		return EventType.NOTSET;
+	}
 
 	public int getId() {
 		return id;
+	}
+
+	public String getSlug() {
+		return slug;
 	}
 }

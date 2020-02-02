@@ -1,10 +1,16 @@
 package com.project.api.data.model.gis;
 
-public class Region {
+import java.io.Serializable;
+
+public class Region implements Serializable {
+
+	private static final long serialVersionUID = -2348701914448963784L;
+	
 	private int id;
 	private String code;
 	private String name;
 	private District district;
+	private int order;
 
 	public int getId() {
 		return id;
@@ -36,6 +42,14 @@ public class Region {
 
 	public void setDistrict(District district) {
 		this.district = district;
+	}
+
+	public int getOrder() {
+		return order;
+	}
+
+	public void setOrder(int order) {
+		this.order = order;
 	}
 
 }

@@ -1,6 +1,11 @@
 package com.project.api.data.model.gis;
 
-public class City {
+import java.io.Serializable;
+
+public class City implements Serializable {
+	
+	private static final long serialVersionUID = -612608775852931940L;
+	
 	private int id;
 	private String code;
 	private String name;
