@@ -1,6 +1,11 @@
 package com.project.api.data.model.gis;
 
-public class Subregion {
+import java.io.Serializable;
+
+public class Subregion implements Serializable {
+
+	private static final long serialVersionUID = -5064152456966562040L;
+	
 	private int id;
 	private String code;
 	private String name;

@@ -19,7 +19,8 @@ public class PlaceRequest {
 	private boolean hideTimeTable;
 	private String[] types;
 	private int cityId;
-	private int districtId;
+	private String[] districts;
+	private String[] regions;
 	private String name;
 
 	public long getId() {
@@ -134,20 +135,28 @@ public class PlaceRequest {
 		this.cityId = cityId;
 	}
 
-	public int getDistrictId() {
-		return districtId;
-	}
-
-	public void setDistrictId(int districtId) {
-		this.districtId = districtId;
-	}
-
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String[] getRegions() {
+		return regions;
+	}
+
+	public void setRegions(String[] regions) {
+		this.regions = regions;
+	}
+
+	public String[] getDistricts() {
+		return districts;
+	}
+
+	public void setDistricts(String[] districts) {
+		this.districts = districts;
 	}
 
 

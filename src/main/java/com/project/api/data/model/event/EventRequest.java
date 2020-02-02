@@ -20,7 +20,8 @@ public class EventRequest {
 	private long timeTableId;
 	private EventStatus status;
 	private String name;
-
+	private String[] districts;
+	private String[] regions;
 	private boolean hidePlace;
 
 	public long getId() {
@@ -141,6 +142,22 @@ public class EventRequest {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String[] getDistricts() {
+		return districts;
+	}
+
+	public void setDistricts(String[] districts) {
+		this.districts = districts;
+	}
+
+	public String[] getRegions() {
+		return regions;
+	}
+
+	public void setRegions(String[] regions) {
+		this.regions = regions;
 	}
 
 }

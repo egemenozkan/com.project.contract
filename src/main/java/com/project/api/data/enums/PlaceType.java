@@ -1,7 +1,7 @@
 package com.project.api.data.enums;
 
 public enum PlaceType {
-	ALL(1, null, "all"), HOTEL(2, MainType.LODGING, "hotel"), AIRPORT(3, MainType.TRANSPORT, "airport"),
+	ALL(1, MainType.ALL, "all"), HOTEL(2, MainType.LODGING, "hotel"), AIRPORT(3, MainType.TRANSPORT, "airport"),
 	BUS_TERMINAL(4, MainType.TRANSPORT, "bus-terminal"), MALL(5, MainType.SHOPPING, "mall"),
 	RESTAURANT(6, MainType.FOOD_AND_BEVERAGE, "restaurant"), MUSEUM(8, MainType.ATTRACTIONS, "museum"),
 	FAST_FOOD(9, MainType.FOOD_AND_BEVERAGE, "fast-food"), MARKETPLACE(10, MainType.SHOPPING, "marketplace-bazaar"), 
@@ -10,10 +10,11 @@ public enum PlaceType {
 	FOREST_AND_PICNIC(14, MainType.ATTRACTIONS, "forest-and-picnic"), HOSPITAL(15, MainType.HEALTH, "hospital"),
 	CINEMA(16, MainType.ENTERTAINMENT, "cinema"), BEACH(17, MainType.ATTRACTIONS, "beach"),
 	CANYON(18, MainType.ATTRACTIONS, "canyon"), THEATHER(19, MainType.ENTERTAINMENT, "theather"),
-	NIGHT_CLUB(20, MainType.ENTERTAINMENT, "night-club"), BAR(21, MainType.FOOD_AND_BEVERAGE, "bar"), 
-	MUNICIPALITY(22, MainType.PUBLIC_ENTERPRISE, "municipality"), CONSULATE(22, MainType.PUBLIC_ENTERPRISE, "consulate"),
-	THEME_PARK(23, MainType.ATTRACTIONS, "theme-park"), CONGRESS_AND_EXHIBITON_CENTER(24, MainType.ATTRACTIONS, "congress_and_exhibition_center"),
-	NOTSET(0, null, "notset");
+	NIGHT_CLUB(20, MainType.NIGHT_LIFE, "night-club"), BAR(21, MainType.NIGHT_LIFE, "bar"), 
+	MUNICIPALITY(22, MainType.PUBLIC_ENTERPRISE, "municipality"), CONSULATE(25, MainType.PUBLIC_ENTERPRISE, "consulate"),
+	THEME_PARK(23, MainType.ATTRACTIONS, "theme-park"), CONGRESS_AND_EXHIBITON_CENTER(24, MainType.ATTRACTIONS, "congress-and-exhibition-center"),
+	//26
+	NOTSET(0, MainType.NOTSET, "notset");
 
 	private final int id;
 	private final MainType mainType;

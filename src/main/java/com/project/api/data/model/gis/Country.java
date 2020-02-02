@@ -1,6 +1,11 @@
 package com.project.api.data.model.gis;
 
-public class Country {
+import java.io.Serializable;
+
+public class Country implements Serializable {
+	
+	private static final long serialVersionUID = 4847704639324251745L;
+	
 	private int id;
 	private String code;
 	private String name;
