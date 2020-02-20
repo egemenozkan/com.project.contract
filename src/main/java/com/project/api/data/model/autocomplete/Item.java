@@ -14,10 +14,17 @@ public class Item implements Serializable {
 	private String url;
 	private ProductType productType;
 	private Language language;
+	private String type;
+
 
 	public Item() {
 
 	}
+	public Item(String label, String url) {
+		this.label = label;
+		this.url = url;
+	}
+
 
 	public Item(long id, String label, String url, ProductType productType) {
 		this.id = id;
@@ -72,6 +79,14 @@ public class Item implements Serializable {
 
 	public void setLanguage(Language language) {
 		this.language = language;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 }

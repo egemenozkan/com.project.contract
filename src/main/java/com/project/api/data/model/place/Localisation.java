@@ -6,15 +6,20 @@ import com.project.api.data.enums.Language;
 
 public class Localisation implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -39811926631306143L;
 	
 	private String name;
 	private Language language;
 	private String slug;
-
+	
+	public Localisation(String name, Language language, String slug) {
+		this.name = name;
+		this.language = language;
+		this.slug = slug;
+	}
+	public Localisation() {
+		
+	}
 	public String getName() {
 		return name;
 	}
