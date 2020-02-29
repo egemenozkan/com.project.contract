@@ -22,8 +22,8 @@ import com.project.api.data.utils.LocalTimeSerializer;
 
 public class Place implements Serializable {
 
-	private static final long serialVersionUID = -5779998595076999777L;
-
+	private static final long serialVersionUID = 6842340327834852081L;
+	
 	private long id;
 	private String name;
 	private Language language;

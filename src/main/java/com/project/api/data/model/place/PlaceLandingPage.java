@@ -8,8 +8,8 @@ import com.project.api.data.model.common.Content;
 
 public class PlaceLandingPage implements Serializable {
 
-	private static final long serialVersionUID = 9056090986462784786L;
-
+	private static final long serialVersionUID = 1227780681629273697L;
+	
 	private long id;
 	private String title;
 	private String keywords;
