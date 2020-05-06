@@ -18,7 +18,7 @@ public class Person {
 	private String fullName;
 	@JsonDeserialize(using = LocalDateDeserializer.class)
 	@JsonSerialize(using = LocalDateSerializer.class)
-	private LocalDate birthdate;
+	private LocalDate birtdate;
 	private IdValue nationality;
 	private String nationalID;
 	private Gender gender;
@@ -58,12 +58,20 @@ public class Person {
 		this.lastName = lastName;
 	}
 
-	public LocalDate getBirthdate() {
-		return birthdate;
+	public String getFullName() {
+		return fullName;
 	}
 
-	public void setBirthdate(LocalDate birthdate) {
-		this.birthdate = birthdate;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public LocalDate getBirtdate() {
+		return birtdate;
+	}
+
+	public void setBirtdate(LocalDate birtdate) {
+		this.birtdate = birtdate;
 	}
 
 	public IdValue getNationality() {
@@ -72,6 +80,14 @@ public class Person {
 
 	public void setNationality(IdValue nationality) {
 		this.nationality = nationality;
+	}
+
+	public String getNationalID() {
+		return nationalID;
+	}
+
+	public void setNationalID(String nationalID) {
+		this.nationalID = nationalID;
 	}
 
 	public Gender getGender() {
@@ -104,22 +120,6 @@ public class Person {
 
 	public void setBloodType(BloodType bloodType) {
 		this.bloodType = bloodType;
-	}
-
-	public String getNationalID() {
-		return nationalID;
-	}
-
-	public void setNationalID(String nationalID) {
-		this.nationalID = nationalID;
-	}
-
-	public String getFullName() {
-		return fullName;
-	}
-
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
 	}
 
 }
