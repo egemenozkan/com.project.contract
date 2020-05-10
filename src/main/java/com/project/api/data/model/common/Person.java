@@ -4,11 +4,11 @@ import java.time.LocalDate;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.project.api.data.enums.BloodType;
 import com.project.api.data.enums.Gender;
 import com.project.api.data.enums.MaritalStatus;
 import com.project.api.data.utils.LocalDateDeserializer;
 import com.project.api.data.utils.LocalDateSerializer;
+import com.project.common.enums.BloodType;
 
 public class Person {
 	private long id;

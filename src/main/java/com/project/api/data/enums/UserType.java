@@ -17,7 +17,7 @@ public enum UserType {
 		}
 		return UserType.NOTSET;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
