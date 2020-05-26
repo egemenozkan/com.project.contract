@@ -2,9 +2,9 @@ package com.project.api.data.model.comment;
 
 import java.time.LocalDateTime;
 
-import com.project.api.data.enums.Language;
 import com.project.api.data.enums.Status;
 import com.project.api.data.model.user.CommentUser;
+import com.project.common.enums.Language;
 
 public class Comment {
 	private long id;

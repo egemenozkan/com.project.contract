@@ -10,7 +10,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.project.api.data.enums.Language;
 import com.project.api.data.enums.PeriodType;
 import com.project.api.data.enums.PlaceType;
 import com.project.api.data.model.Facility;
@@ -19,6 +18,7 @@ import com.project.api.data.model.common.Contact;
 import com.project.api.data.model.file.MyFile;
 import com.project.api.data.utils.LocalTimeDeserializer;
 import com.project.api.data.utils.LocalTimeSerializer;
+import com.project.common.enums.Language;
 
 public class Place implements Serializable {
 

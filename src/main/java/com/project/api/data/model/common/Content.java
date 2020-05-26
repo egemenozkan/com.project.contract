@@ -3,7 +3,7 @@ package com.project.api.data.model.common;
 import java.io.Serializable;
 
 import com.project.api.data.enums.ContentType;
-import com.project.api.data.enums.Language;
+import com.project.common.enums.Language;
 
 public class Content implements Serializable {
 	

@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import com.project.api.data.enums.Language;
 import com.project.api.data.model.place.Place;
+import com.project.common.enums.Language;
 
 public class EventSimple implements Serializable {
 	

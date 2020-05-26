@@ -2,7 +2,7 @@ package com.project.api.data.model.common;
 
 import java.util.List;
 
-import com.project.api.data.enums.Language;
+import com.project.common.enums.Language;
 
 public class LandingPage {
 

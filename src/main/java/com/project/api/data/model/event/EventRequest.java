@@ -2,8 +2,8 @@ package com.project.api.data.model.event;
 
 import java.time.LocalDate;
 
-import com.project.api.data.enums.Language;
 import com.project.api.data.enums.PeriodType;
+import com.project.common.enums.Language;
 
 public class EventRequest {
 	private long id;

@@ -26,23 +26,11 @@
 	</properties>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.7.25</version>
-		</dependency>
-
+		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 			<version>${org.springframework.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.project</groupId>
-			<artifactId>common</artifactId>
-			<version>1.0</version>
 		</dependency>
 		<!-- Security -->
 		<dependency>
@@ -50,6 +38,18 @@
 			<artifactId>spring-security-core</artifactId>
 			<version>${org.springframework.security-version}</version>
 		</dependency>
+		<!-- PROJECT -->
+		<dependency>
+			<groupId>com.project</groupId>
+			<artifactId>common</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+
 		<!-- Utils - JSOUP -->
 		<dependency>
 			<groupId>org.jsoup</groupId>
