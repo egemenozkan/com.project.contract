@@ -1,8 +1,8 @@
 package com.project.api.data.model.place;
 
-import com.project.api.data.enums.Language;
 import com.project.api.data.enums.MainType;
 import com.project.api.data.enums.PlaceType;
+import com.project.common.enums.Language;
 
 public class PlaceRequest {
 	private long id;

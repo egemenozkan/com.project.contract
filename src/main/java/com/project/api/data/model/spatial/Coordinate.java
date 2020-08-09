@@ -1,23 +1,27 @@
 package com.project.api.data.model.spatial;
 
-public class Coordinate {
-    private double latitude;
-    private double longitude;
+import java.io.Serializable;
 
-    public double getLatitude() {
-	return latitude;
-    }
+public class Coordinate implements Serializable {
 
-    public void setLatitude(double latitude) {
-	this.latitude = latitude;
-    }
+	private static final long serialVersionUID = 722910329232237518L;
+	private double latitude;
+	private double longitude;
 
-    public double getLongitude() {
-	return longitude;
-    }
+	public double getLatitude() {
+		return latitude;
+	}
 
-    public void setLongitude(double longitude) {
-	this.longitude = longitude;
-    }
+	public void setLatitude(double latitude) {
+		this.latitude = latitude;
+	}
+
+	public double getLongitude() {
+		return longitude;
+	}
+
+	public void setLongitude(double longitude) {
+		this.longitude = longitude;
+	}
 
 }

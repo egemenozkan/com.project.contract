@@ -3,8 +3,8 @@ package com.project.api.data.model.event;
 import java.io.Serializable;
 import java.util.List;
 
-import com.project.api.data.enums.Language;
 import com.project.api.data.model.common.Content;
+import com.project.common.enums.Language;
 
 public class EventLandingPage implements Serializable {
 

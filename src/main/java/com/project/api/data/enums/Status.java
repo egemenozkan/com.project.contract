@@ -1,7 +1,7 @@
 package com.project.api.data.enums;
 
 public enum Status {
-	ALL(1), PENDING(2), APPROVED(3), BANNED(4),  NOTSET(0);
+	ALL(1), PENDING(2), APPROVED(3), BANNED(4), NOTSET(0);
 
 	private final int id;
 
@@ -17,7 +17,7 @@ public enum Status {
 		}
 		return Status.NOTSET;
 	}
-	
+
 	public int getId() {
 		return id;
 	}

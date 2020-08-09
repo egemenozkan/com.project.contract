@@ -2,8 +2,8 @@ package com.project.api.data.model.autocomplete;
 
 import java.io.Serializable;
 
-import com.project.api.data.enums.Language;
 import com.project.api.data.enums.ProductType;
+import com.project.common.enums.Language;
 
 public class AutocompleteRequest implements Serializable {
 

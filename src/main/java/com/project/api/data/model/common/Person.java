@@ -4,132 +4,122 @@ import java.time.LocalDate;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
-import com.project.api.data.enums.BloodType;
-import com.project.api.data.enums.Gender;
-import com.project.api.data.enums.MaritalStatus;
-import com.project.api.data.enums.UserType;
+import com.project.api.data.utils.LocalDateDeserializer;
+import com.project.api.data.utils.LocalDateSerializer;
+import com.project.common.enums.BloodType;
+import com.project.common.enums.Gender;
+import com.project.common.enums.MaritalStatus;
 
-public abstract class Person {
-    private long id;
-    private String firstName;
-    private String middleName;
-    private String lastName;
-    private String fullName;
-    @JsonDeserialize(using = LocalDateDeserializer.class)
-    @JsonSerialize(using = LocalDateSerializer.class)
-    private LocalDate birthdate;
-    private IdValue nationality;
-    private String nationalID;
-    private Gender gender;
-    private MaritalStatus maritalStatus;
-    private ContactInformation contactInformation;
-    private BloodType bloodType;
-    private UserType userType;
+public class Person {
+	private long id;
+	private String firstName;
+	private String middleName;
+	private String lastName;
+	private String fullName;
+	@JsonDeserialize(using = LocalDateDeserializer.class)
+	@JsonSerialize(using = LocalDateSerializer.class)
+	private LocalDate birtdate;
+	private IdValue nationality;
+	private String nationalID;
+	private Gender gender;
+	private MaritalStatus maritalStatus;
+	private ContactInformation contactInformation;
+	private BloodType bloodType;
 
-    public long getId() {
-	return id;
-    }
+	public long getId() {
+		return id;
+	}
 
-    public void setId(long id) {
-	this.id = id;
-    }
+	public void setId(long id) {
+		this.id = id;
+	}
 
-    public String getFirstName() {
-	return firstName;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public void setFirstName(String firstName) {
-	this.firstName = firstName;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public String getMiddleName() {
-	return middleName;
-    }
+	public String getMiddleName() {
+		return middleName;
+	}
 
-    public void setMiddleName(String middleName) {
-	this.middleName = middleName;
-    }
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
+	}
 
-    public String getLastName() {
-	return lastName;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public void setLastName(String lastName) {
-	this.lastName = lastName;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public LocalDate getBirthdate() {
-	return birthdate;
-    }
+	public String getFullName() {
+		return fullName;
+	}
 
-    public void setBirthdate(LocalDate birthdate) {
-	this.birthdate = birthdate;
-    }
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
 
-    public IdValue getNationality() {
-	return nationality;
-    }
+	public LocalDate getBirtdate() {
+		return birtdate;
+	}
 
-    public void setNationality(IdValue nationality) {
-	this.nationality = nationality;
-    }
+	public void setBirtdate(LocalDate birtdate) {
+		this.birtdate = birtdate;
+	}
 
-    public Gender getGender() {
-	return gender;
-    }
+	public IdValue getNationality() {
+		return nationality;
+	}
 
-    public void setGender(Gender gender) {
-	this.gender = gender;
-    }
+	public void setNationality(IdValue nationality) {
+		this.nationality = nationality;
+	}
 
-    public MaritalStatus getMaritalStatus() {
-	return maritalStatus;
-    }
+	public String getNationalID() {
+		return nationalID;
+	}
 
-    public void setMaritalStatus(MaritalStatus maritalStatus) {
-	this.maritalStatus = maritalStatus;
-    }
+	public void setNationalID(String nationalID) {
+		this.nationalID = nationalID;
+	}
 
-    public ContactInformation getContactInformation() {
-	return contactInformation;
-    }
+	public Gender getGender() {
+		return gender;
+	}
 
-    public void setContactInformation(ContactInformation contactInformation) {
-	this.contactInformation = contactInformation;
-    }
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
 
-    public BloodType getBloodType() {
-	return bloodType;
-    }
+	public MaritalStatus getMaritalStatus() {
+		return maritalStatus;
+	}
 
-    public void setBloodType(BloodType bloodType) {
-	this.bloodType = bloodType;
-    }
+	public void setMaritalStatus(MaritalStatus maritalStatus) {
+		this.maritalStatus = maritalStatus;
+	}
 
-    public String getNationalID() {
-	return nationalID;
-    }
+	public ContactInformation getContactInformation() {
+		return contactInformation;
+	}
 
-    public void setNationalID(String nationalID) {
-	this.nationalID = nationalID;
-    }
+	public void setContactInformation(ContactInformation contactInformation) {
+		this.contactInformation = contactInformation;
+	}
 
-    public UserType getUserType() {
-	return userType;
-    }
+	public BloodType getBloodType() {
+		return bloodType;
+	}
 
-    public void setUserType(UserType userType) {
-	this.userType = userType;
-    }
-
-    public String getFullName() {
-	return fullName;
-    }
-
-    public void setFullName(String fullName) {
-	this.fullName = fullName;
-    }
+	public void setBloodType(BloodType bloodType) {
+		this.bloodType = bloodType;
+	}
 
 }

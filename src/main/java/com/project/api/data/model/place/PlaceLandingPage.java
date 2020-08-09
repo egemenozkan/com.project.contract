@@ -3,13 +3,13 @@ package com.project.api.data.model.place;
 import java.io.Serializable;
 import java.util.List;
 
-import com.project.api.data.enums.Language;
 import com.project.api.data.model.common.Content;
+import com.project.common.enums.Language;
 
 public class PlaceLandingPage implements Serializable {
 
-	private static final long serialVersionUID = 9056090986462784786L;
-
+	private static final long serialVersionUID = 1227780681629273697L;
+	
 	private long id;
 	private String title;
 	private String keywords;

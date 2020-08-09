@@ -2,8 +2,8 @@ package com.project.api.data.model.event;
 
 import java.time.LocalDate;
 
-import com.project.api.data.enums.Language;
 import com.project.api.data.enums.PeriodType;
+import com.project.common.enums.Language;
 
 public class EventRequest {
 	private long id;
@@ -15,13 +15,13 @@ public class EventRequest {
 	private Language language;
 	private int limit;
 	private Boolean random;
-	private String[] types;
+	private String[] types = new String[0];
 	private Boolean distinct;
 	private long timeTableId;
 	private EventStatus status;
 	private String name;
-	private String[] districts;
-	private String[] regions;
+	private String[] districts =  new String[0];
+	private String[] regions = new String[0];
 	private boolean hidePlace;
 
 	public long getId() {

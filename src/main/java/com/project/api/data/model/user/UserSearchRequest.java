@@ -2,8 +2,8 @@ package com.project.api.data.model.user;
 
 import java.time.LocalDate;
 
-import com.project.api.data.enums.Gender;
 import com.project.api.data.enums.UserType;
+import com.project.common.enums.Gender;
 
 public class UserSearchRequest {
 	private UserType type;

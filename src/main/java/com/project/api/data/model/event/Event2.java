@@ -9,11 +9,11 @@ import java.util.Map;
 import org.springframework.util.CollectionUtils;
 
 import com.project.api.data.enums.FeeType;
-import com.project.api.data.enums.Language;
 import com.project.api.data.enums.PeriodType;
 import com.project.api.data.model.file.MyFile;
 import com.project.api.data.model.place.Localisation;
 import com.project.api.data.model.place.Place;
+import com.project.common.enums.Language;
 
 public class Event2 implements Serializable {
 	/**

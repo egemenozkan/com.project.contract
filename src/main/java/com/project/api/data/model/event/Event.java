@@ -11,7 +11,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.project.api.data.enums.FeeType;
-import com.project.api.data.enums.Language;
 import com.project.api.data.enums.PeriodType;
 import com.project.api.data.model.file.MyFile;
 import com.project.api.data.model.place.Localisation;
@@ -20,6 +19,7 @@ import com.project.api.data.utils.LocalDateDeserializer;
 import com.project.api.data.utils.LocalDateSerializer;
 import com.project.api.data.utils.LocalTimeDeserializer;
 import com.project.api.data.utils.LocalTimeSerializer;
+import com.project.common.enums.Language;
 
 public class Event implements Serializable {
 	private static final long serialVersionUID = -5523632934285768952L;

@@ -17,7 +17,7 @@ public enum VenueType {
 		}
 		return VenueType.NOTSET;
 	}
-	
+
 	public int getId() {
 		return id;
 	}
