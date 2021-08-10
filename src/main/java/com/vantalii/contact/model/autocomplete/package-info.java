@@ -1,0 +1,1 @@
+package com.vantalii.contact.model.autocomplete;

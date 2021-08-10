@@ -4,13 +4,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.project</groupId>
+	<groupId>com.vantalii</groupId>
 	<artifactId>contract</artifactId>
-	<version>1.2</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>com.project.contract</name>
-	<description>Project Hatirsinas WEB</description>
+	<name>vantalii-contract</name>
+	<description>Vantalii Contract</description>
 
 
 	<properties>
@@ -23,6 +23,7 @@
 		<org.springframework.version>5.1.2.RELEASE</org.springframework.version>
 		<org.springframework.security-version>5.1.11.RELEASE</org.springframework.security-version>
 		<utils.jsoup.version>1.7.2</utils.jsoup.version>
+		<com.birprojedaha.common.version>1.0</com.birprojedaha.common.version>
 	</properties>
 
 	<dependencies>
@@ -40,9 +41,9 @@
 		</dependency>
 		<!-- PROJECT -->
 		<dependency>
-			<groupId>com.project</groupId>
+			<groupId>com.birprojedaha</groupId>
 			<artifactId>common</artifactId>
-			<version>1.0</version>
+			<version>${com.birprojedaha.common.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
